@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Angelo Pomasongo">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body class="pagina">
+    <div class="menu-navegacion">
+        <h1 class="mi-nombre">Angelo Pomasongo</h1>
+        <a href="#sobre-mi" class="enlace">Sobre Mí</a> |
+        <a href="#proyectos" class="enlace">Mis Proyectos</a> |
+        <a href="#contacto" class="enlace">Contacto</a>
+    </div>
+    <hr>
+    <div id="sobre-mi" class="seccion-sobre-mi">
+        <h2 class="titulo-seccion">Sobre Mí</h2>
+        <!-- El atributo width="150" hace que la imagen no sea gigante por defecto -->
+        <img src="mi-foto.jpg" alt="Mi foto de perfil" class="foto-perfil" width="150">
+        <p class="texto-normal">
+            ¡Hola! Soy un estudiante de desarrollo web. Me encanta crear páginas y sigo aprendiendo a usar HTML y CSS.
+        </p>
+    </div>
+    <div id="proyectos" class="seccion-proyectos">
+        <h2 class="titulo-seccion">Mis Proyectos</h2>
+        <ul class="lista-proyectos">
+            <li class="caja-proyecto">
+                <h3 class="nombre-proyecto">Página de Recetas</h3>
+                <p class="texto-normal">Una página donde guardo mis recetas favoritas usando HTML básico.</p>
+                <a href="#" class="enlace-proyecto">Ver página</a>
+            </li>
+            <br>
+            <li class="caja-proyecto">
+                <h3 class="nombre-proyecto">Mi Blog Personal</h3>
+                <p class="texto-normal">Un blog donde escribo sobre mis pasatiempos.</p>
+                <a href="#" class="enlace-proyecto">Ver página</a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div id="contacto" class="seccion-contacto">
+        <h2 class="titulo-seccion">Contacto</h2>
+        <p class="texto-normal">Si quieres hablar conmigo, puedes enviarme un correo electrónico:</p>
+        <!-- mailto: hace que al hacer clic se abra el programa de correos -->
+        <a href="mailto:micorreo@ejemplo.com" class="enlace-correo">micorreo@ejemplo.com</a>
+    </div>
+
+</body>
+
+</html>
