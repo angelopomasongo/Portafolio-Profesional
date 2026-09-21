@@ -1,0 +1,324 @@
+/* =========================================
+   1. CONFIGURACIÓN Y TRANSICIONES GLOBALES
+   ========================================= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    /* Transición suave cuando cambias entre modo claro y oscuro */
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Transición básica para todos los botones y enlaces interactivos */
+a, button, .caja-proyecto, .cuadro-texto, .boton-red {
+    transition: all 0.3s ease;
+}
+
+/* Colores Modo Oscuro */
+.tema-oscuro {
+    background-color: #11151c;
+    color: #cccccc;
+}
+.tema-oscuro h1, .tema-oscuro h2, .tema-oscuro h3, .tema-oscuro b {
+    color: #ffffff;
+}
+
+/* Colores Modo Claro */
+.tema-claro {
+    background-color: #ffffff;
+    color: #333333;
+}
+.tema-claro h1, .tema-claro h2, .tema-claro h3, .tema-claro b {
+    color: #000000;
+}
+
+/* Centrado del contenido */
+.contenedor-central {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* =========================================
+   2. ANIMACIONES CON @KEYFRAMES (BÁSICAS)
+   ========================================= */
+
+/* Animación para que las cosas aparezcan cayendo suavemente */
+@keyframes aparecerDesdeArriba {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación para que las cosas suban suavemente */
+@keyframes aparecerDesdeAbajo {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicamos la animación a la cabecera y a la sección principal */
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    /* Ejecuta la animación al cargar la página */
+    animation: aparecerDesdeArriba 0.8s ease;
+}
+
+.seccion-espaciada {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    /* Ejecuta la animación de entrada */
+    animation: aparecerDesdeAbajo 1s ease;
+}
+
+/* =========================================
+   3. ESTILOS DE ELEMENTOS Y EFECTOS HOVER
+   ========================================= */
+
+.caja-perfil {
+    display: flex;
+    align-items: center;
+}
+
+.foto-redonda {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Efecto al pasar el mouse por la foto de perfil */
+.foto-redonda:hover {
+    transform: scale(1.1) rotate(5deg); /* Se agranda un poquito y gira */
+}
+
+.menu-enlaces a {
+    color: inherit;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.menu-enlaces a:hover {
+    color: #ff4a70;
+    transform: translateY(-2px); /* Sube 2 píxeles al pasar el cursor */
+}
+
+.enlace-marcado {
+    border-bottom: 2px solid #ff4a70;
+}
+
+.boton-icono {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.boton-icono:hover {
+    transform: scale(1.2); /* Crece el icono de luz */
+}
+
+.texto-rojo {
+    color: #ff4a70;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.titulo-gigante {
+    font-family: Georgia, serif;
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.texto-mediano {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.caja-redes-rapidas {
+    margin-top: 20px;
+}
+
+.boton-red {
+    display: inline-block;
+    padding: 10px 18px;
+    margin-right: 10px;
+    background-color: #222630;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #444;
+}
+
+/* Efecto al pasar el mouse sobre los botones de redes */
+.boton-red:hover {
+    background-color: #ff4a70;
+    color: white;
+    transform: translateY(-3px); /* Levanta el botón */
+}
+
+.tema-claro .boton-red {
+    background-color: #e5e5e5;
+    color: #000000;
+}
+
+/* Secciones generales */
+.seccion-linea-arriba {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: 1px solid #444;
+}
+
+.cuadro-texto {
+    background-color: #2a2f3a;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.cuadro-texto:hover {
+    background-color: #ff4a70;
+    color: white;
+}
+
+/* Proyectos con animación al pasar el mouse */
+.caja-botones-filtro {
+    margin-bottom: 20px;
+}
+
+.boton-filtro {
+    padding: 8px 15px;
+    margin-right: 5px;
+    background-color: transparent;
+    color: inherit;
+    border: 1px solid #666;
+    cursor: pointer;
+}
+
+.boton-filtro:hover {
+    transform: scale(1.05);
+}
+
+.seleccionado {
+    background-color: #ff4a70;
+    border-color: #ff4a70;
+    color: white;
+}
+
+.lista-proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.caja-proyecto {
+    background-color: #222630;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* ANIMACIÓN CLAVE: Las tarjetas de proyectos se elevan y flotan con sombra al pasar el cursor */
+.caja-proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(255, 74, 112, 0.2);
+}
+
+.tema-claro .caja-proyecto, .tema-claro .cuadro-texto {
+    background-color: #f0f0f0;
+}
+
+.enlace-color {
+    color: #ff4a70;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.enlace-color:hover {
+    text-decoration: underline;
+    transform: translateX(4px); /* Se mueve ligeramente a la derecha */
+}
+
+/* Contacto y Formulario */
+.caja-datos-contacto {
+    background-color: #222630;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.tema-claro .caja-datos-contacto {
+    background-color: #f0f0f0;
+}
+
+.caja-datos-contacto p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.subtitulo-form {
+    margin-bottom: 15px;
+}
+
+.caja-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.campo-texto {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.campo-texto:focus {
+    outline: none;
+    border-color: #ff4a70; /* Cambia el borde a rosado cuando haces clic para escribir */
+}
+
+.boton-enviar {
+    padding: 10px;
+    background-color: #ff4a70;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-enviar:hover {
+    opacity: 0.9;
+    transform: scale(1.02); /* Crece un poquito al pasar el mouse */
+}
+
+.texto-oculto {
+    display: none;
+    color: #4CAF50;
+    margin-top: 15px;
+}
+
+.pie-pagina {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #444;
+}

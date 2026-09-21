@@ -1,54 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Angelo Pomasongo">
     <title>Mi Portafolio</title>
+    <!-- Vinculamos el archivo CSS -->
     <link rel="stylesheet" href="static/css/style.css">
 </head>
+<body class="tema-oscuro">
 
-<body class="pagina">
-    <div class="menu-navegacion">
-        <h1 class="mi-nombre">Angelo Pomasongo</h1>
-        <a href="#sobre-mi" class="enlace">Sobre Mí</a> |
-        <a href="#proyectos" class="enlace">Mis Proyectos</a> |
-        <a href="#contacto" class="enlace">Contacto</a>
-    </div>
-    <hr>
-    <div id="sobre-mi" class="seccion-sobre-mi">
-        <h2 class="titulo-seccion">Sobre Mí</h2>
-        <!-- El atributo width="150" hace que la imagen no sea gigante por defecto -->
-        <img src="mi-foto.jpg" alt="Mi foto de perfil" class="foto-perfil" width="150">
-        <p class="texto-normal">
-            ¡Hola! Soy un estudiante de desarrollo web. Me encanta crear páginas y sigo aprendiendo a usar HTML y CSS.
-        </p>
-    </div>
-    <div id="proyectos" class="seccion-proyectos">
-        <h2 class="titulo-seccion">Mis Proyectos</h2>
-        <ul class="lista-proyectos">
-            <li class="caja-proyecto">
-                <h3 class="nombre-proyecto">Página de Recetas</h3>
-                <p class="texto-normal">Una página donde guardo mis recetas favoritas usando HTML básico.</p>
-                <a href="#" class="enlace-proyecto">Ver página</a>
-            </li>
-            <br>
-            <li class="caja-proyecto">
-                <h3 class="nombre-proyecto">Mi Blog Personal</h3>
-                <p class="texto-normal">Un blog donde escribo sobre mis pasatiempos.</p>
-                <a href="#" class="enlace-proyecto">Ver página</a>
-            </li>
-        </ul>
-    </div>
-    <hr>
-    <div id="contacto" class="seccion-contacto">
-        <h2 class="titulo-seccion">Contacto</h2>
-        <p class="texto-normal">Si quieres hablar conmigo, puedes enviarme un correo electrónico:</p>
-        <!-- mailto: hace que al hacer clic se abra el programa de correos -->
-        <a href="mailto:micorreo@ejemplo.com" class="enlace-correo">micorreo@ejemplo.com</a>
-    </div>
+    <!-- Barra de navegación superior -->
+    <header class="cabecera">
+        <div class="caja-perfil">
+            <img src="foto.jpg" alt="Foto de perfil" class="foto-redonda">
+            <b class="nombre-texto">Angelo Pomasongo</b>
+        </div>
+        
+        <nav class="menu-enlaces">
+            <a href="#inicio" class="enlace-marcado"><b>01</b> hogar</a>
+            <a href="#habilidades"><b>02</b> habilidades</a>
+            <a href="#proyectos"><b>03</b> proyectos</a>
+            <a href="#contacto"><b>04</b> contacto</a>
+            <!-- Evento onclick básico para cambiar el tema -->
+            <button id="boton-tema" class="boton-icono" onclick="cambiarTema()">💡</button>
+        </nav>
+    </header>
 
+    <!-- Contenido central -->
+    <main class="contenedor-central">
+        
+        <!-- Sección 1: Presentación principal -->
+        <section id="inicio" class="seccion-espaciada">
+            <p class="texto-rojo">HOLA, ME LLAMO ANGELO.</p>
+            <h1 class="titulo-gigante">Hago sitios web.</h1>
+            <p class="texto-mediano">
+                Soy desarrollador front-end junior y estudiante en Skillnest. Me encanta aprender a crear páginas web e interactiva.
+            </p>
+            
+            <!-- Botones rápidos a tus redes -->
+            <div class="caja-redes-rapidas">
+                <a href="https://github.com/angelopomasongo" target="_blank" class="boton-red">🐙 GitHub</a>
+                <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" class="boton-red">💼 LinkedIn</a>
+            </div>
+        </section>
+
+        <!-- Sección 2: Habilidades -->
+        <section id="habilidades" class="seccion-linea-arriba">
+            <h2 class="titulo-normal">Mis Habilidades</h2>
+            <div class="caja-habilidades">
+                <span class="cuadro-texto">HTML</span>
+                <span class="cuadro-texto">CSS</span>
+                <span class="cuadro-texto">JavaScript</span>
+                <span class="cuadro-texto">Git y GitHub</span>
+            </div>
+        </section>
+
+        <!-- Sección 3: Proyectos -->
+        <section id="proyectos" class="seccion-linea-arriba">
+            <h2 class="titulo-normal">Mis Proyectos</h2>
+            
+            <!-- Botones con funciones sencillas asociadas al clic -->
+            <div class="caja-botones-filtro">
+                <button class="boton-filtro seleccionado" onclick="mostrarTodos()">Todos</button>
+                <button class="boton-filtro" onclick="mostrarHtml()">Solo HTML/CSS</button>
+                <button class="boton-filtro" onclick="mostrarJs()">Con JavaScript</button>
+            </div>
+
+            <!-- Proyectos identificados con ID único para manipulación directa -->
+            <div class="lista-proyectos">
+                <div id="proyecto1" class="caja-proyecto">
+                    <h3>Pagina Web</h3>
+                    <p>Un sitio web básico estructurado con HTML y decorado con CSS</p>
+                    <a href="https://github.com/angelopomasongo/Skillnest_fundamentos_web/tree/main/STACK_CSS/22_paguina_de-perfil-(core)" target="_blank" class="enlace-color">Ver en GitHub 🐙</a>
+                </div>
+
+                <div id="proyecto2" class="caja-proyecto">
+                    <h3>Calculadora Web</h3>
+                    <p>Una calculadora que funciona usando lógica de JavaScript puro.</p>
+                    <a href="https://github.com/tu-usuario/proyecto-calculadora" target="_blank" class="enlace-color">Ver en GitHub 🐙</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 4: Video -->
+        <section id="video" class="seccion-linea-arriba">
+            <h2 class="titulo-normal">Video de Presentación</h2>
+            <video width="100%" controls>
+                <source src="mi-video.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+        </section>
+
+        <!-- Sección 5: Contacto Directo -->
+        <section id="contacto" class="seccion-linea-arriba">
+            <h2 class="titulo-normal">Contacto Directo</h2>
+            
+            <div class="caja-datos-contacto">
+                <p><b>📧 Correo:</b> <a href="mailto:angelopimi1990@gmail.com" class="enlace-color">angelopimi1990@gmail.com</a></p>
+                <p><b>📱 Teléfono / WhatsApp:</b> <a href="tel:+56931053833" class="enlace-color">+56 931 053 833</a></p>
+                <p><b>🐙 GitHub:</b> <a href="https://github.com/angelopomasongo" target="_blank" class="enlace-color">github.com/AngeloPomasongo</a></p>
+                <p><b>💼 LinkedIn:</b> <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" class="enlace-color">linkedin.com/in/tu-usuario</a></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Angelo Pomasongo. Proyecto para Skillnest.</p>
+    </footer>
+
+    <script src="static/js/script.js"></script>
 </body>
-
 </html>
