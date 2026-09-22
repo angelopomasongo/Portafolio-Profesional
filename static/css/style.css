@@ -1,0 +1,270 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.tema-oscuro {
+    background-color: #11151c;
+    color: #ffffff;
+}
+
+.tema-claro {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.contenedor-central {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.seccion-espaciada {
+    padding: 40px 0;
+}
+
+.seccion-linea-arriba {
+    padding: 40px 0;
+}
+
+.cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.caja-perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.foto-redonda {
+    width: 120px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.foto-redonda:hover {
+    transform: scale(1.1);
+}
+
+.menu-enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-enlaces a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu-enlaces a:hover {
+    color: #ff4a70;
+}
+
+.enlace-marcado {
+    color: #ff4a70;
+    font-weight: bold;
+}
+
+.boton-icono {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton-icono:hover {
+    transform: scale(1.2);
+}
+
+.texto-rojo {
+    color: #ff4a70;
+    font-weight: bold;
+}
+
+.titulo-gigante {
+    font-size: 50px;
+    margin: 10px 0 20px 0;
+}
+
+.texto-mediano {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+}
+
+.caja-redes-rapidas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0 0 0;
+}
+
+.boton-red {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #222630;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #444444;
+    transition: 0.3s;
+}
+
+.boton-red:hover {
+    background-color: #ff4a70;
+}
+
+.caja-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cuadro-texto {
+    background-color: #2a2f3a;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.cuadro-texto:hover {
+    background-color: #ff4a70;
+}
+
+.caja-botones-filtro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 20px 0;
+}
+
+.boton-filtro {
+    padding: 8px 15px;
+    background-color: transparent;
+    color: inherit;
+    border: 1px solid #666666;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton-filtro:hover {
+    border-color: #ff4a70;
+}
+
+.seleccionado {
+    background-color: #ff4a70;
+    color: #ffffff;
+}
+
+.lista-proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.caja-proyecto {
+    background-color: #222630;
+    padding: 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.imagen-proyecto {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.caja-enlaces-proyecto {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0 0 0;
+}
+
+.boton-web {
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+    background-color: #ff4a70;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton-web:hover {
+    background-color: #e03e5f;
+}
+
+.enlace-color {
+    color: #ff4a70;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.lista-educacion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.caja-educacion {
+    background-color: #222630;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+}
+
+.logo-educacion {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.info-educacion h3 {
+    margin: 0 0 5px 0;
+}
+
+.info-educacion p {
+    margin: 0;
+}
+
+.caja-datos-contacto {
+    background-color: #222630;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0 0 20px 0;
+}
+
+.caja-datos-contacto p {
+    margin: 10px 0;
+}
+
+.pie-pagina {
+    text-align: center;
+    padding: 20px;
+}

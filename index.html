@@ -5,47 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Angelo Pomasongo">
     <title>Mi Portafolio</title>
-    <!-- Vinculamos el archivo CSS -->
+
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body class="tema-oscuro">
 
-    <!-- Barra de navegación superior -->
     <header class="cabecera">
         <div class="caja-perfil">
-            <img src="foto.jpg" alt="Foto de perfil" class="foto-redonda">
             <b class="nombre-texto">Angelo Pomasongo</b>
         </div>
         
         <nav class="menu-enlaces">
             <a href="#inicio" class="enlace-marcado"><b>01</b> Sobre Mi</a>
-            <a href="#habilidades"><b>02</b> habilidades</a>
-            <a href="#proyectos"><b>03</b> proyectos</a>
-            <a href="#contacto"><b>04</b> contacto</a>
-            <!-- Evento onclick básico para cambiar el tema -->
+            <a href="#habilidades"><b>02</b> Habilidades</a>
+            <a href="#educacion"><b>03</b> Educación</a>
+            <a href="#proyectos"><b>04</b> Proyectos</a>
+            <a href="#contacto"><b>05</b> Contacto</a>
             <button id="boton-tema" class="boton-icono" onclick="cambiarTema()">💡</button>
         </nav>
     </header>
 
-    <!-- Contenido central -->
     <main class="contenedor-central">
-        
-        <!-- Sección 1: Presentación principal -->
         <section id="inicio" class="seccion-espaciada">
+            <img src="static/images/angelo.png" alt="Foto de perfil" class="foto-redonda">
             <p class="texto-rojo">HOLA, ME LLAMO ANGELO.</p>
             <h1 class="titulo-gigante">Hago sitios web.</h1>
             <p class="texto-mediano">
-                Soy desarrollador front-end junior y estudiante en Skillnest. Me encanta aprender a crear páginas web e interactiva.
+                Desarrollador Front-End Junior enfocado en la creación de interfaces web modernas, funcionales e interactivas. Apasionado por la tecnología, la resolución de problemas y el aprendizaje continuo, me especializo en transformar ideas en experiencias digitales intuitivas y bien estructuradas.
             </p>
-            
-            <!-- Botones rápidos a tus redes -->
+
             <div class="caja-redes-rapidas">
                 <a href="https://github.com/angelopomasongo" target="_blank" class="boton-red">🐙 GitHub</a>
-                <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" class="boton-red">💼 LinkedIn</a>
+                <a href="https://www.linkedin.com/in/angelo-pomasongo-48a174439/" target="_blank" class="boton-red">💼 LinkedIn</a>
             </div>
         </section>
 
-        <!-- Sección 2: Habilidades -->
         <section id="habilidades" class="seccion-linea-arriba">
             <h2 class="titulo-normal">Mis Habilidades</h2>
             <div class="caja-habilidades">
@@ -56,42 +50,59 @@
             </div>
         </section>
 
-        <!-- Sección 3: Proyectos -->
+        <section id="educacion" class="seccion-linea-arriba">
+            <h2 class="titulo-normal">Educación y Formación</h2>
+            <div class="lista-educacion">
+                <div class="caja-educacion">
+                    <img src="static/images/vvh.png" alt="Logo Liceo Vate Vicente Huidobro" class="logo-educacion">
+                    <div class="info-educacion">
+                        <h3>Liceo Vate Vicente Huidobro</h3>
+                        <p>Enseñanza Media / Educación Secundaria</p>
+                    </div>
+                </div>
+
+                <div class="caja-educacion">
+                    <img src="static/images/skillnest.jfif" alt="Logo Skillnest" class="logo-educacion">
+                    <div class="info-educacion">
+                        <h3>Skillnest</h3>
+                        <p>Especialización en Desarrollo Web Front-End</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="proyectos" class="seccion-linea-arriba">
             <h2 class="titulo-normal">Mis Proyectos</h2>
-            
-            <!-- Botones con funciones sencillas asociadas al clic -->
+
             <div class="caja-botones-filtro">
                 <button class="boton-filtro seleccionado" onclick="mostrarTodos()">Todos</button>
                 <button class="boton-filtro" onclick="mostrarHtml()">Solo HTML/CSS</button>
                 <button class="boton-filtro" onclick="mostrarJs()">Con JavaScript</button>
             </div>
 
-            <!-- Proyectos identificados con ID único para manipulación directa -->
             <div class="lista-proyectos">
                 <div id="proyecto1" class="caja-proyecto">
+                    <img src="static/images/pagina web.png" alt="Captura Pagina Web" class="imagen-proyecto">
                     <h3>Pagina Web</h3>
                     <p>Un sitio web básico estructurado con HTML y decorado con CSS</p>
-                    <a href="https://github.com/angelopomasongo/Skillnest_fundamentos_web/tree/main/STACK_CSS/22_paguina_de-perfil-(core)" target="_blank" class="enlace-color">Ver en GitHub 🐙</a>
+                    <div class="caja-enlaces-proyecto">
+                        <a href="https://github.com/angelopomasongo/Skillnest_fundamentos_web/tree/main/STACK_CSS/09_Dise%C3%B1o%20de%20una%20p%C3%A1gina%20web%20(Core)" target="_blank" class="enlace-color">Ver en GitHub 🐙</a>
+                        <a href="https://angelopomasongo.github.io/pagina-web/" target="_blank" class="boton-web">🌐 Ver Sitio Web</a>
+                    </div>
                 </div>
 
                 <div id="proyecto2" class="caja-proyecto">
-                <div id="proyecto2" class="caja-proyecto">
+                    <img src="static/images/me gusta (core).png" alt="Captura Me Gusta" class="imagen-proyecto">
                     <h3>Me gusta (core)</h3>
-                    <p>Pagina Web con HTML, CSS y JavaScript </p>
-                    <a href="https://github.com/angelopomasongo/Skillnest_fundamentos_web/tree/main/Stack.JS/18-megusta(core)" target="_blank" class="enlace-color">Ver en GitHub 🐙</a>
-                </div>
-
-                <div id="proyecto3" class="caja-proyecto">
-                    <h3>Calculadora Web</h3>
-                    <p>Una calculadora que funciona usando lógica de JavaScript puro.</p>
-                    <a href="https://github.com/tu-usuario/proyecto-calculadora" target="_blank" class="enlace-color">Ver en GitHub 🐙</a>
-                </div>
+                    <p>Pagina Web con HTML, CSS y JavaScript</p>
+                    <div class="caja-enlaces-proyecto">
+                        <a href="https://github.com/angelopomasongo/Skillnest_fundamentos_web/tree/main/Stack.JS/18-megusta(core)" target="_blank" class="enlace-color">Ver en GitHub 🐙</a>
+                        <a href="https://angelopomasongo.github.io/me-gusta-core/" target="_blank" class="boton-web">🌐 Ver Sitio Web</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección 4: Video -->
         <section id="video" class="seccion-linea-arriba">
             <h2 class="titulo-normal">Video de Presentación</h2>
             <video width="100%" controls>
@@ -100,7 +111,6 @@
             </video>
         </section>
 
-        <!-- Sección 5: Contacto Directo -->
         <section id="contacto" class="seccion-linea-arriba">
             <h2 class="titulo-normal">Contacto Directo</h2>
             
